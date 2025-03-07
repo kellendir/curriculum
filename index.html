@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Domínguez - Desarrollador DAM</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Contenedor principal con Grid */
+        .container {
+            max-width: 1000px;
+            /* Ancho máximo del contenido */
+            margin: 0 auto;
+            /* Centra el contenido */
+            display: grid;
+            /* Usa Grid para el layout */
+            grid-template-columns: 1fr 2fr;
+            /* Dos columnas: sidebar (1fr) y main-content (2fr) */
+            gap: 20px;
+            /* Espacio entre columnas */
+        }
+
+        /* Estilo del encabezado */
+        header {
+            grid-column: 1 / -1;
+            /* Ocupa todas las columnas */
+            text-align: center;
+            /* Centra el texto */
+            padding: 20px;
+            /* Espaciado interno */
+            background-color: #2c3e50;
+            /* Color de fondo oscuro */
+            color: white;
+            /* Texto en blanco */
+            border-radius: 10px;
+            /* Bordes redondeados */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 35px;
+        }
+
+        /* Título principal sin margen y grande */
+
+        /* Estilo de los títulos de sección */
+        h2 {
+            color: #2c3e50;
+            /* Color oscuro */
+            border-bottom: 2px solid #bdc3c7;
+            /* Línea inferior */
+            padding-bottom: 5px;
+            /* Espaciado bajo la línea */
+        }
+
+        /* Estilo del sidebar (columna izquierda) */
+        .sidebar {
+            background-color: #34495e;
+            /* Color de fondo oscuro */
+            color: white;
+            /* Texto en blanco */
+            padding: 20px;
+            /* Espaciado interno */
+            border-radius: 10px;
+            /* Bordes redondeados */
+            text-align: center;
+            /* Centra el contenido */
+        }
+
+        .sidebar h2 {
+            color: white;
+        }
+
+        /* Títulos en sidebar */
+
+        /* Estilo de la foto */
+        .foto-perfil {
+            width: 150px;
+            /* Ancho de la foto */
+            height: 150px;
+            /* Alto de la foto */
+            border-radius: 50%;
+            /* Forma circular */
+            border: 3px solid white;
+            /* Borde blanco */
+            margin-bottom: 20px;
+            /* Espacio debajo de la foto */
+        }
+
+        /* Estilo del contenido principal (columna derecha) */
+        .main-content {
+            background-color: white;
+            /* Fondo blanco */
+            padding: 20px;
+            /* Espaciado interno */
+            border-radius: 10px;
+            /* Bordes redondeados */
+        }
+
+        /* Estilo de las secciones */
+        .seccion {
+            margin-bottom: 25px;
+        }
+
+        /* Espacio entre secciones */
+
+        /* Estilo de las listas */
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+
+        }
+
+        /* Estilo de las cajas destacadas */
+        .destacado {
+            background-color: #ecf0f1;
+            /* Fondo gris claro */
+            padding: 15px;
+            /* Espaciado interno */
+            border-radius: 5px;
+            /* Bordes redondeados */
+        }
+
+        /* Contenedor flexible para las tarjetas de habilidades */
+        .flex-container {
+            display: flex;
+            /* Usa Flexbox */
+            flex-wrap: wrap;
+            /* Permite que las tarjetas se envuelvan */
+            gap: 10px;
+            /* Espacio entre tarjetas */
+        }
+
+        /* Estilo de cada tarjeta de habilidades */
+        .flex-item {
+            flex: 1 1 calc(50% - 10px);
+            /* Cada tarjeta ocupa la mitad del espacio menos el gap */
+            background-color: #ecf0f1;
+            /* Fondo gris claro */
+            padding: 10px;
+            /* Espaciado interno */
+            border-radius: 5px;
+            /* Bordes redondeados */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contenedor principal de la página entera -->
+    <div class="container">
+
+        <header>
+            <h1>Alberto Domínguez Domingo</h1>
+            <p>Estudiante en Desarrollo de Aplicaciones Multiplataforma</p>
+        </header>
+
+        <!-- Sidebar (columna izquierda) -->
+        <aside class="sidebar">
+
+            <img src="foto-perfil.jpg" alt="Foto de Alberto Domínguez" class="foto-perfil">
+
+            <!-- Sección de contacto -->
+            <div class="seccion">
+                <h2>Contacto</h2>
+                <p><strong>614 318 532</strong></p>
+                <p>aldro25@gmail.com</p>
+
+            </div>
+
+            <!-- Sección de herramientas -->
+            <div class="seccion">
+                <h2>Herramientas</h2>
+                <ul>
+                    <li>Java</li>
+                    <li>C# (Unity)</li>
+                    <li>HTML5 | CSS3 | XML</li>
+                    <li>MySQL | Git | ORACLE</li>
+                    <li>XML</li>
+                </ul>
+            </div>
+
+            <!-- Sección de softskills -->
+            <div class="seccion">
+                <h2>Softskills</h2>
+                <ul>
+                    <li>Liderazgo de equipos</li>
+                    <li>Resolución de problemas</li>
+                    <li>Comunicación efectiva</li>
+                    <li>Gestión del tiempo</li>
+                </ul>
+            </div>
+
+            <!-- Sección de idiomas -->
+            <div class="seccion">
+                <h2>Idiomas</h2>
+                <ul>
+                    <li>🇪🇸 Español: Nativo</li>
+                    <li>🇬🇧 Inglés: B2 (Comprensión C1)</li>
+                    <li>🇩🇪 Alemán: B2</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Otra Información</h2>
+                <ul>
+                    <li>Carnet de Conducir</li>
+                    <li>Movilidad Geográfica</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Contenido principal (columna derecha) -->
+        <main class="main-content">
+            <!-- Sección de habilidades adquiridas -->
+            <div class="seccion">
+                <!-- Sección de formación -->
+                <div class="seccion">
+                    <h2>Formación</h2>
+                    <div class="destacado">
+                        <p><strong>Desarrollo de Aplicaciones Multiplataforma</strong><br>
+                            IES Pío Baroja (2024-2026)</p>
+                        <p><strong>Desarrollo de Videojuegos con Unity 3D</strong><br>
+                            CFTIC (2024-2025)</p>
+                        <p><strong>Bootcamp en Programación</strong><br>
+                            Academia 42 Berlin (2023)</p>
+                    </div>
+                </div>
+                <h2>Habilidades Adquiridas</h2>
+                <div class="flex-container">
+                    <!-- Tarjeta 1: Liderazgo y Gestión -->
+                    <div class="flex-item">
+                        <h3>Liderazgo y Gestión</h3>
+                        <ul>
+                            <p>Gracias a mi trabajo en otros sectores:</p>
+                            <li>Coordinación de equipos multidisciplinares</li>
+                            <li>Planificación de turnos y recursos</li>
+                            <li>Capacitación de nuevos empleados</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tarjeta 2: Atención al Detalle -->
+                    <div class="flex-item">
+                        <h3>Atención al Detalle</h3>
+                        <ul>
+                            <li>Control de calidad en entornos de alto rendimiento</li>
+                            <li>Optimización de procesos para eficiencia</li>
+                            <li>Gestión de inventarios y pedidos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tarjeta 3: Comunicación Multilingüe -->
+                    <div class="flex-item">
+                        <h3>Comunicación Multilingüe</h3>
+                        <ul>
+                            <li>Experiencia en entornos internacionales</li>
+                            <li>Adaptación a culturas diversas</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tarjeta 4: Resolución de Problemas -->
+                    <div class="flex-item">
+                        <h3>Resolución de Problemas</h3>
+                        <ul>
+                            <li>Manejo de situaciones bajo presión</li>
+                            <li>Respuesta rápida a imprevistos</li>
+                            <li>Mejora continua de procesos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de intereses -->
+            <div class="seccion">
+                <h2>Intereses</h2>
+                <p>🎮 Desarrollo de videojuegos | 📱 Apps móviles innovadoras<br>
+                    🌍 Realidad Virtual | 🤖 Automatización con IA</p>
+            </div>
+        </main>
+    </div>
+</body
