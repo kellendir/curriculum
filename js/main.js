@@ -46,22 +46,33 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* ---------------------------------------------------------
-   3. PHONE 3D TILT (mouse)
+   3. HERO BANNER — subtle 3D tilt + cursor glow
    --------------------------------------------------------- */
-const phone = document.getElementById('phone');
-const phoneWrap = phone?.parentElement;
+const heroBanner = document.querySelector('.hero-banner');
+const heroBannerGlow = heroBanner?.querySelector('.hero-banner-glow');
 
-if (phone && phoneWrap) {
-    phoneWrap.addEventListener('mousemove', (e) => {
-        const r = phoneWrap.getBoundingClientRect();
+if (heroBanner) {
+    const resetBanner = () => {
+        heroBanner.style.transform = '';
+        if (heroBannerGlow) heroBannerGlow.style.background = '';
+    };
+
+    heroBanner.addEventListener('mousemove', (e) => {
+        const r = heroBanner.getBoundingClientRect();
         const px = ((e.clientX - r.left) / r.width) - 0.5;
         const py = ((e.clientY - r.top) / r.height) - 0.5;
-        phone.style.transform =
-            `perspective(1200px) rotateY(${-12 + px * 14}deg) rotateX(${4 - py * 12}deg)`;
+        heroBanner.style.transform =
+            `perspective(1400px) rotateY(${px * 4}deg) rotateX(${-py * 3}deg)`;
+
+        if (heroBannerGlow) {
+            const mx = (px + 0.5) * 100;
+            const my = (py + 0.5) * 100;
+            heroBannerGlow.style.background =
+                `radial-gradient(circle at ${mx}% ${my}%, rgba(199, 17, 225, 0.18), transparent 55%)`;
+        }
     });
-    phoneWrap.addEventListener('mouseleave', () => {
-        phone.style.transform = 'perspective(1200px) rotateY(-12deg) rotateX(4deg)';
-    });
+
+    heroBanner.addEventListener('mouseleave', resetBanner);
 }
 
 /* ---------------------------------------------------------

@@ -52,84 +52,31 @@
 
         <!-- HERO -->
         <section class="hero">
-            <div class="hero-grid">
-                <div>
-                    <div class="hero-status">
-                        <span class="status-dot"></span>
-                        Open to opportunities · Madrid, Spain
-                    </div>
-
-                    <h1>
-                        <span class="line"><span>Kirtash</span></span>
-                        <span class="line"><span>Dev</span></span>
-                        <span class="line"><span class="hero-tag text-gradient">— Mobile Dev.</span></span>
-                    </h1>
-
-                    <p class="hero-desc">
-                        Software Developer crafting cross-platform mobile experiences — apps shipped on Google Play and civic-tech tools currently in development. Passionate about clean architecture and meaningful UX.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">
-                            Let's build something
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <path d="M5 12h14M13 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                        <a href="#work" class="btn btn-ghost">
-                            See my work
-                        </a>
-                    </div>
+            <div class="hero-stack">
+                <div class="hero-status">
+                    <span class="status-dot"></span>
+                    Open to opportunities · Madrid, Spain
                 </div>
 
-                <div class="phone-wrap">
-                    <div class="phone" id="phone">
-                        <div class="phone-screen">
-                            <div class="phone-time">9:41</div>
-                            <div class="phone-greeting">// stack.tech</div>
-                            <div class="phone-name">Kirtash's<br>tech stack</div>
+                <figure class="hero-banner" data-parallax-tilt>
+                    <img src="assets/google-play-banner.jpg" alt="Kirtash Dev — Mobile App Developer" loading="eager">
+                    <div class="hero-banner-glow" aria-hidden="true"></div>
+                </figure>
 
-                            <div class="phone-card">
-                                <div class="card-icon k">
-                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L0 12l12 12V0z"/></svg>
-                                </div>
-                                <div class="card-text">
-                                    <div class="card-title">Kotlin</div>
-                                    <div class="card-sub">Android · MVVM</div>
-                                </div>
-                            </div>
+                <p class="hero-desc">
+                    Software Developer crafting cross-platform mobile experiences — apps shipped on Google Play and civic-tech tools currently in development. Passionate about clean architecture and meaningful UX.
+                </p>
 
-                            <div class="phone-card">
-                                <div class="card-icon s">
-                                    <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-                                </div>
-                                <div class="card-text">
-                                    <div class="card-title">Swift</div>
-                                    <div class="card-sub">iOS · SwiftUI</div>
-                                </div>
-                            </div>
-
-                            <div class="phone-card">
-                                <div class="card-icon u">
-                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                                </div>
-                                <div class="card-text">
-                                    <div class="card-title">Firebase</div>
-                                    <div class="card-sub">Auth · Firestore</div>
-                                </div>
-                            </div>
-
-                            <div class="phone-card">
-                                <div class="card-icon j">
-                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                                </div>
-                                <div class="card-text">
-                                    <div class="card-title">Java + Git</div>
-                                    <div class="card-sub">Clean code · CI</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        Let's build something
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M13 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#work" class="btn btn-ghost">
+                        See my work
+                    </a>
                 </div>
             </div>
         </section>
@@ -210,7 +157,34 @@
 
                 <article class="project-card">
                     <div class="project-header">
-                        <span class="project-badge">Live on Google Play</span>
+                        <span class="project-badge play-store-badge">
+                            <svg class="ps-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="psGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00C853"/>
+                                        <stop offset="100%" stop-color="#00E676"/>
+                                    </linearGradient>
+                                    <linearGradient id="psYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#FFD600"/>
+                                        <stop offset="100%" stop-color="#FFAB00"/>
+                                    </linearGradient>
+                                    <linearGradient id="psRed" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#FF1744"/>
+                                        <stop offset="100%" stop-color="#D50000"/>
+                                    </linearGradient>
+                                    <linearGradient id="psBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00B0FF"/>
+                                        <stop offset="100%" stop-color="#0091EA"/>
+                                    </linearGradient>
+                                </defs>
+                                <!-- 4 quadrants forming the Google Play triangle -->
+                                <path d="M5 4 L5 16 L15.5 11 Z" fill="url(#psGreen)"/>
+                                <path d="M5 4 L15.5 11 L27 16 Z" fill="url(#psYellow)"/>
+                                <path d="M5 28 L15.5 21 L27 16 Z" fill="url(#psRed)"/>
+                                <path d="M5 28 L5 16 L15.5 21 Z" fill="url(#psBlue)"/>
+                            </svg>
+                            Live on Google Play
+                        </span>
                         <span class="project-year">2025 — present</span>
                     </div>
                     <h3 class="project-name">SmartShift</h3>
@@ -220,6 +194,12 @@
                         <span>Android</span><span>Kotlin</span><span>Play Store</span>
                     </div>
                     <a href="https://play.google.com/store/apps/details?id=com.smartshift.app" target="_blank" rel="noopener" class="project-link">
+                        <svg class="ps-icon-sm" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M5 4 L5 16 L15.5 11 Z" fill="#00C853"/>
+                            <path d="M5 4 L15.5 11 L27 16 Z" fill="#FFD600"/>
+                            <path d="M5 28 L15.5 21 L27 16 Z" fill="#FF1744"/>
+                            <path d="M5 28 L5 16 L15.5 21 Z" fill="#00B0FF"/>
+                        </svg>
                         View on Google Play
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                             <path d="M7 17L17 7M17 7H8M17 7v9"/>
@@ -453,6 +433,19 @@
                 <article class="edu-card">
                     <div class="edu-icon">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12"/>
+                        </svg>
+                    </div>
+                    <div class="edu-date">Nov 2024 — Feb 2025</div>
+                    <h3 class="edu-title">Video Game &amp; Virtual Reality Development with Unity 3D</h3>
+                    <div class="edu-school">CFTIC · 160 hours</div>
+                    <p class="edu-desc">Intensive training in Unity 3D and C# programming, 3D modeling, physics systems and AR/VR development. Game design principles applied to immersive interactive experiences.</p>
+                </article>
+
+                <article class="edu-card">
+                    <div class="edu-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                             <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
                         </svg>
                     </div>
@@ -497,8 +490,8 @@
                 <p>Open to mobile development opportunities. I'd love to hear what you're building.</p>
 
                 <div class="hero-actions" style="justify-content:center;">
-                    <a href="mailto:aldro25@gmail.com" class="btn btn-primary">
-                        aldro25@gmail.com
+                    <a href="mailto:kirtashdev@gmail.com" class="btn btn-primary">
+                        kirtashdev@gmail.com
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <path d="M5 12h14M13 5l7 7-7 7"/>
                         </svg>
@@ -512,12 +505,12 @@
                         </svg>
                         614 318 532
                     </a>
-                    <a href="mailto:aldro25@gmail.com" class="contact-pill">
+                    <a href="mailto:kirtashdev@gmail.com" class="contact-pill">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                             <path d="M22 6l-10 7L2 6"/>
                         </svg>
-                        aldro25@gmail.com
+                        kirtashdev@gmail.com
                     </a>
                     <span class="contact-pill" style="cursor:default;">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
