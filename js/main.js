@@ -1,5 +1,5 @@
 /* =========================================================
-   Alberto Domínguez · Portfolio
+   Kirtash Dev · Portfolio
    Main entry — all interactive behaviour lives here.
    ========================================================= */
 
