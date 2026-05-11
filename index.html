@@ -1,288 +1,557 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alberto Domínguez - Desarrollador DAM</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+    <meta name="description" content="Alberto Domínguez Domingo — Mobile App Developer specialized in Android, iOS and cross-platform development.">
+    <title>Alberto Domínguez · Mobile App Developer</title>
 
-        /* Contenedor principal con Grid */
-        .container {
-            max-width: 1000px;
-            /* Ancho máximo del contenido */
-            margin: 0 auto;
-            /* Centra el contenido */
-            display: grid;
-            /* Usa Grid para el layout */
-            grid-template-columns: 1fr 2fr;
-            /* Dos columnas: sidebar (1fr) y main-content (2fr) */
-            gap: 20px;
-            /* Espacio entre columnas */
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
-        /* Estilo del encabezado */
-        header {
-            grid-column: 1 / -1;
-            /* Ocupa todas las columnas */
-            text-align: center;
-            /* Centra el texto */
-            padding: 20px;
-            /* Espaciado interno */
-            background-color: #2c3e50;
-            /* Color de fondo oscuro */
-            color: white;
-            /* Texto en blanco */
-            border-radius: 10px;
-            /* Bordes redondeados */
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 35px;
-        }
-
-        /* Título principal sin margen y grande */
-
-        /* Estilo de los títulos de sección */
-        h2 {
-            color: #2c3e50;
-            /* Color oscuro */
-            border-bottom: 2px solid #bdc3c7;
-            /* Línea inferior */
-            padding-bottom: 5px;
-            /* Espaciado bajo la línea */
-        }
-
-        /* Estilo del sidebar (columna izquierda) */
-        .sidebar {
-            background-color: #34495e;
-            /* Color de fondo oscuro */
-            color: white;
-            /* Texto en blanco */
-            padding: 20px;
-            /* Espaciado interno */
-            border-radius: 10px;
-            /* Bordes redondeados */
-            text-align: center;
-            /* Centra el contenido */
-        }
-
-        .sidebar h2 {
-            color: white;
-        }
-
-        /* Títulos en sidebar */
-
-        /* Estilo de la foto */
-        .foto-perfil {
-            width: 150px;
-            /* Ancho de la foto */
-            height: 150px;
-            /* Alto de la foto */
-            border-radius: 50%;
-            /* Forma circular */
-            border: 3px solid white;
-            /* Borde blanco */
-            margin-bottom: 20px;
-            /* Espacio debajo de la foto */
-        }
-
-        /* Estilo del contenido principal (columna derecha) */
-        .main-content {
-            background-color: white;
-            /* Fondo blanco */
-            padding: 20px;
-            /* Espaciado interno */
-            border-radius: 10px;
-            /* Bordes redondeados */
-        }
-
-        /* Estilo de las secciones */
-        .seccion {
-            margin-bottom: 25px;
-        }
-
-        /* Espacio entre secciones */
-
-        /* Estilo de las listas */
-        ul {
-            list-style-type: none;
-            padding-left: 20px;
-
-        }
-
-        /* Estilo de las cajas destacadas */
-        .destacado {
-            background-color: #ecf0f1;
-            /* Fondo gris claro */
-            padding: 15px;
-            /* Espaciado interno */
-            border-radius: 5px;
-            /* Bordes redondeados */
-        }
-
-        /* Contenedor flexible para las tarjetas de habilidades */
-        .flex-container {
-            display: flex;
-            /* Usa Flexbox */
-            flex-wrap: wrap;
-            /* Permite que las tarjetas se envuelvan */
-            gap: 10px;
-            /* Espacio entre tarjetas */
-        }
-
-        /* Estilo de cada tarjeta de habilidades */
-        .flex-item {
-            flex: 1 1 calc(50% - 10px);
-            /* Cada tarjeta ocupa la mitad del espacio menos el gap */
-            background-color: #ecf0f1;
-            /* Fondo gris claro */
-            padding: 10px;
-            /* Espaciado interno */
-            border-radius: 5px;
-            /* Bordes redondeados */
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!-- Contenedor principal de la página entera -->
-    <div class="container">
 
-        <header>
-            <h1>Alberto Domínguez Domingo</h1>
-            <p>Estudiante en Desarrollo de Aplicaciones Multiplataforma</p>
-        </header>
-
-        <!-- Sidebar (columna izquierda) -->
-        <aside class="sidebar">
-
-            <img src="foto-perfil.jpg" alt="Foto de Alberto Domínguez" class="foto-perfil">
-
-            <!-- Sección de contacto -->
-            <div class="seccion">
-                <h2>Contacto</h2>
-                <p><strong>614 318 532</strong></p>
-                <p>aldro25@gmail.com</p>
-
-            </div>
-
-            <!-- Sección de herramientas -->
-            <div class="seccion">
-                <h2>Herramientas</h2>
-                <ul>
-                    <li>Java</li>
-                    <li>C# (Unity)</li>
-                    <li>HTML5 | CSS3 | XML</li>
-                    <li>MySQL | Git | ORACLE</li>
-                    <li>XML</li>
-                </ul>
-            </div>
-
-            <!-- Sección de softskills -->
-            <div class="seccion">
-                <h2>Softskills</h2>
-                <ul>
-                    <li>Liderazgo de equipos</li>
-                    <li>Resolución de problemas</li>
-                    <li>Comunicación efectiva</li>
-                    <li>Gestión del tiempo</li>
-                </ul>
-            </div>
-
-            <!-- Sección de idiomas -->
-            <div class="seccion">
-                <h2>Idiomas</h2>
-                <ul>
-                    <li>🇪🇸 Español: Nativo</li>
-                    <li>🇬🇧 Inglés: B2 (Comprensión C1)</li>
-                    <li>🇩🇪 Alemán: B2</li>
-                </ul>
-            </div>
-            <div>
-                <h2>Otra Información</h2>
-                <ul>
-                    <li>Carnet de Conducir</li>
-                    <li>Movilidad Geográfica</li>
-                </ul>
-            </div>
-        </aside>
-
-        <!-- Contenido principal (columna derecha) -->
-        <main class="main-content">
-            <!-- Sección de habilidades adquiridas -->
-            <div class="seccion">
-                <!-- Sección de formación -->
-                <div class="seccion">
-                    <h2>Formación</h2>
-                    <div class="destacado">
-                        <p><strong>Desarrollo de Aplicaciones Multiplataforma</strong><br>
-                            IES Pío Baroja (2024-2026)</p>
-                        <p><strong>Desarrollo de Videojuegos con Unity 3D</strong><br>
-                            CFTIC (2024-2025)</p>
-                        <p><strong>Bootcamp en Programación</strong><br>
-                            Academia 42 Berlin (2023)</p>
-                    </div>
-                </div>
-                <h2>Habilidades Adquiridas</h2>
-                <div class="flex-container">
-                    <!-- Tarjeta 1: Liderazgo y Gestión -->
-                    <div class="flex-item">
-                        <h3>Liderazgo y Gestión</h3>
-                        <ul>
-                            <p>Gracias a mi trabajo en otros sectores:</p>
-                            <li>Coordinación de equipos multidisciplinares</li>
-                            <li>Planificación de turnos y recursos</li>
-                            <li>Capacitación de nuevos empleados</li>
-                        </ul>
-                    </div>
-
-                    <!-- Tarjeta 2: Atención al Detalle -->
-                    <div class="flex-item">
-                        <h3>Atención al Detalle</h3>
-                        <ul>
-                            <li>Control de calidad en entornos de alto rendimiento</li>
-                            <li>Optimización de procesos para eficiencia</li>
-                            <li>Gestión de inventarios y pedidos</li>
-                        </ul>
-                    </div>
-
-                    <!-- Tarjeta 3: Comunicación Multilingüe -->
-                    <div class="flex-item">
-                        <h3>Comunicación Multilingüe</h3>
-                        <ul>
-                            <li>Experiencia en entornos internacionales</li>
-                            <li>Adaptación a culturas diversas</li>
-                        </ul>
-                    </div>
-
-                    <!-- Tarjeta 4: Resolución de Problemas -->
-                    <div class="flex-item">
-                        <h3>Resolución de Problemas</h3>
-                        <ul>
-                            <li>Manejo de situaciones bajo presión</li>
-                            <li>Respuesta rápida a imprevistos</li>
-                            <li>Mejora continua de procesos</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sección de intereses -->
-            <div class="seccion">
-                <h2>Intereses</h2>
-                <p>🎮 Desarrollo de videojuegos | 📱 Apps móviles innovadoras<br>
-                    🌍 Realidad Virtual | 🤖 Automatización con IA</p>
-            </div>
-        </main>
+    <!-- Background ambient -->
+    <div class="ambient" aria-hidden="true">
+        <div class="orb orb-1" data-parallax="0.3"></div>
+        <div class="orb orb-2" data-parallax="0.15"></div>
+        <div class="orb orb-3" data-parallax="0.25"></div>
     </div>
-</body
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <a href="#top" class="logo">
+            <span class="logo-dot"></span>
+            Alberto.dev
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">
+            Get in touch
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+        </a>
+    </nav>
+
+    <main id="top">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-status">
+                        <span class="status-dot"></span>
+                        Open to opportunities · Madrid, Spain
+                    </div>
+
+                    <h1>
+                        <span class="line"><span>Alberto</span></span>
+                        <span class="line"><span>Domínguez</span></span>
+                        <span class="line"><span class="hero-tag text-gradient">— Mobile Dev.</span></span>
+                    </h1>
+
+                    <p class="hero-desc">
+                        Software Developer crafting cross-platform mobile experiences — apps shipped on Google Play and civic-tech tools currently in development. Passionate about clean architecture and meaningful UX.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            Let's build something
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#work" class="btn btn-ghost">
+                            See my work
+                        </a>
+                    </div>
+                </div>
+
+                <div class="phone-wrap">
+                    <div class="phone" id="phone">
+                        <div class="phone-screen">
+                            <div class="phone-time">9:41</div>
+                            <div class="phone-greeting">// stack.tech</div>
+                            <div class="phone-name">Alberto's<br>tech stack</div>
+
+                            <div class="phone-card">
+                                <div class="card-icon k">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L0 12l12 12V0z"/></svg>
+                                </div>
+                                <div class="card-text">
+                                    <div class="card-title">Kotlin</div>
+                                    <div class="card-sub">Android · MVVM</div>
+                                </div>
+                            </div>
+
+                            <div class="phone-card">
+                                <div class="card-icon s">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                                </div>
+                                <div class="card-text">
+                                    <div class="card-title">Swift</div>
+                                    <div class="card-sub">iOS · SwiftUI</div>
+                                </div>
+                            </div>
+
+                            <div class="phone-card">
+                                <div class="card-icon u">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="3"/></svg>
+                                </div>
+                                <div class="card-text">
+                                    <div class="card-title">Unity 3D</div>
+                                    <div class="card-sub">C# · AR/VR</div>
+                                </div>
+                            </div>
+
+                            <div class="phone-card">
+                                <div class="card-icon j">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                                </div>
+                                <div class="card-text">
+                                    <div class="card-title">Java + Git</div>
+                                    <div class="card-sub">Clean code · CI</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span class="marquee-item">Kotlin</span>
+                <span class="marquee-item">Swift</span>
+                <span class="marquee-item">Unity 3D</span>
+                <span class="marquee-item">C#</span>
+                <span class="marquee-item">Java</span>
+                <span class="marquee-item">JavaScript</span>
+                <span class="marquee-item">MVVM</span>
+                <span class="marquee-item">Clean Code</span>
+                <span class="marquee-item">Git</span>
+                <!-- duplicate for seamless loop -->
+                <span class="marquee-item">Kotlin</span>
+                <span class="marquee-item">Swift</span>
+                <span class="marquee-item">Unity 3D</span>
+                <span class="marquee-item">C#</span>
+                <span class="marquee-item">Java</span>
+                <span class="marquee-item">JavaScript</span>
+                <span class="marquee-item">MVVM</span>
+                <span class="marquee-item">Clean Code</span>
+                <span class="marquee-item">Git</span>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="reveal">
+                <div class="eyebrow">01 · About me</div>
+                <h2 class="section-title">From hospitality leadership<br>to <span class="text-gradient">building software</span>.</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-photo-wrap reveal">
+                    <img src="assets/IMG_8897.png" alt="Alberto Domínguez" class="about-photo">
+                    <div class="about-photo-label">
+                        <strong>Alberto Domínguez</strong>
+                        Madrid · 2026
+                    </div>
+                </div>
+
+                <div class="about-body reveal">
+                    <p>
+                        I'm a <strong>Software Developer</strong> building cross-platform mobile applications.
+                    </p>
+                    <p class="text-muted">
+                        I work with Kotlin, Swift and Unity 3D — learning daily through real products: from a solo-published Android app on Google Play to a civic-tech mobile tool I'm leading for the regional government of Galicia. Years leading international teams in luxury environments taught me to ship under pressure without sacrificing craft.
+                    </p>
+
+                    <div class="stats reveal-stagger">
+                        <div>
+                            <div class="stat-num" data-count="3">0</div>
+                            <div class="stat-label">// shipped products</div>
+                        </div>
+                        <div>
+                            <div class="stat-num" data-count="3">0</div>
+                            <div class="stat-label">// spoken languages</div>
+                        </div>
+                        <div>
+                            <div class="stat-num">2026</div>
+                            <div class="stat-label">// DAM graduation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK / PROJECTS -->
+        <section id="work">
+            <div class="reveal">
+                <div class="eyebrow">02 · Selected work</div>
+                <h2 class="section-title">Real products,<br>shipped to <span class="text-gradient">real users</span>.</h2>
+            </div>
+
+            <div class="projects-grid reveal-stagger">
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge">Live on Google Play</span>
+                        <span class="project-year">2025 — present</span>
+                    </div>
+                    <h3 class="project-name">SmartShift</h3>
+                    <p class="project-role">Creator · Solo developer</p>
+                    <p class="project-desc">Native Android application designed, developed and published end-to-end as a solo project. Available globally on the Google Play Store.</p>
+                    <div class="project-tech">
+                        <span>Android</span><span>Kotlin</span><span>Play Store</span>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartshift.app" target="_blank" rel="noopener" class="project-link">
+                        View on Google Play
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                        </svg>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge upcoming">Upcoming release</span>
+                        <span class="project-year">2026</span>
+                    </div>
+                    <h3 class="project-name">Galicia Wildfire Alert</h3>
+                    <p class="project-role">Mobile Developer</p>
+                    <p class="project-desc">Mobile app for the Xunta de Galicia enabling citizens to report wildfires in three clicks. Part of the largest firefighting operation deployed by the regional government.</p>
+                    <div class="project-tech">
+                        <span>Mobile</span><span>Civic Tech</span><span>Public Sector</span>
+                    </div>
+                    <a href="https://www.larazon.es/galicia/galicia-lanza-app-avisar-incendios-tres-clics-refuerza-mayor-operativo-fuego_2026032369c16ae3c3ab173a4614fe48.html" target="_blank" rel="noopener" class="project-link">
+                        Read the press coverage
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                        </svg>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge">Live</span>
+                        <span class="project-year">·</span>
+                    </div>
+                    <h3 class="project-name">The Thing From The Future</h3>
+                    <p class="project-role">Co-developer</p>
+                    <p class="project-desc">Interactive web tool exploring possible futures through generative card combinations. Used worldwide by educators, designers and researchers as a foresight imagination prompt.</p>
+                    <div class="project-tech">
+                        <span>JavaScript</span><span>Web</span><span>UX</span>
+                    </div>
+                    <a href="https://thethingfromthefuture.cc/#!/home" target="_blank" rel="noopener" class="project-link">
+                        Visit the site
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                        </svg>
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <div class="reveal">
+                <div class="eyebrow">03 · Tech stack</div>
+                <h2 class="section-title">The tools I use<br>to ship great products.</h2>
+            </div>
+
+            <div class="skills-grid reveal-stagger">
+                <div class="skill-card">
+                    <div class="skill-card-title">Mobile</div>
+                    <ul class="chip-list">
+                        <li class="chip primary">Kotlin</li>
+                        <li class="chip primary">Swift</li>
+                        <li class="chip">Android Studio</li>
+                        <li class="chip">Xcode</li>
+                        <li class="chip">MVVM</li>
+                        <li class="chip">MVI</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-title">Game / XR</div>
+                    <ul class="chip-list">
+                        <li class="chip primary">Unity 3D</li>
+                        <li class="chip primary">C#</li>
+                        <li class="chip">AR / VR</li>
+                        <li class="chip">3D modeling</li>
+                        <li class="chip">Physics</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-title">Backend &amp; Data</div>
+                    <ul class="chip-list">
+                        <li class="chip">Java</li>
+                        <li class="chip">Python</li>
+                        <li class="chip">SQL</li>
+                        <li class="chip">NoSQL</li>
+                        <li class="chip">Oracle</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-title">Web</div>
+                    <ul class="chip-list">
+                        <li class="chip">JavaScript</li>
+                        <li class="chip">HTML5</li>
+                        <li class="chip">CSS3</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-title">Tooling &amp; DevOps</div>
+                    <ul class="chip-list">
+                        <li class="chip primary">Git</li>
+                        <li class="chip">Rocketbot</li>
+                        <li class="chip">Antigravity</li>
+                        <li class="chip">AGILE</li>
+                        <li class="chip">Clean Code</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-title">Languages</div>
+                    <ul class="chip-list">
+                        <li class="chip">🇪🇸 Spanish · Native</li>
+                        <li class="chip">🇬🇧 English · B2</li>
+                        <li class="chip">🇩🇪 German · B2</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience">
+            <div class="reveal">
+                <div class="eyebrow">04 · Experience</div>
+                <h2 class="section-title">Where I've built<br>and what I've learned.</h2>
+            </div>
+
+            <div class="timeline reveal-stagger">
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-meta">
+                            <span class="tl-company">Lapisoft</span>
+                            <span class="tl-date">Feb 2026 — present</span>
+                        </div>
+                        <h3 class="tl-role">Mobile App Developer</h3>
+                        <ul class="tl-list">
+                            <li><strong>End-to-End Development:</strong> spearheaded the full lifecycle of native mobile applications for both Android and iOS platforms.</li>
+                            <li><strong>Architecture:</strong> designed scalable, maintainable solutions implementing MVVM and MVI design patterns.</li>
+                            <li><strong>Clean Code:</strong> applied Clean Code principles and industry best practices to produce readable, efficient and robust codebases.</li>
+                            <li><strong>Version control:</strong> daily use of <strong>Git</strong> for branching, code review and collaborative workflows.</li>
+                        </ul>
+                        <div class="tl-tech">
+                            <span>Kotlin</span><span>Swift</span><span>MVVM</span><span>MVI</span><span>Git</span><span>Clean Code</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-meta">
+                            <span class="tl-company">AlronGroup · Internship</span>
+                            <span class="tl-date">May 2025 — Jun 2025</span>
+                        </div>
+                        <h3 class="tl-role">Bot Builder Intern</h3>
+                        <ul class="tl-list">
+                            <li>Developed automation bots with <strong>Rocketbot</strong> to streamline and optimize core business processes.</li>
+                            <li>Improved workflow efficiency and produced detailed technical documentation for internal teams.</li>
+                        </ul>
+                        <div class="tl-tech">
+                            <span>Rocketbot</span><span>RPA</span><span>Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-meta">
+                            <span class="tl-company">JW Marriott · Hotel Zoo Berlin et al.</span>
+                            <span class="tl-date">2018 — 2024</span>
+                        </div>
+                        <h3 class="tl-role">International Hospitality Leadership</h3>
+                        <ul class="tl-list">
+                            <li>Led diverse teams in high-pressure, luxury environments across multiple countries.</li>
+                            <li>Maintained meticulous focus on customer service and critical problem-solving under pressure.</li>
+                            <li>Supervised quality standards and operational details to ensure consistent service excellence.</li>
+                        </ul>
+                        <div class="tl-tech">
+                            <span>Leadership</span><span>Cross-cultural</span><span>Operations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-meta">
+                            <span class="tl-company">Sitel</span>
+                            <span class="tl-date">2004 — 2008</span>
+                        </div>
+                        <h3 class="tl-role">IT Technician — Payment Management</h3>
+                        <ul class="tl-list">
+                            <li>Handled POS terminal incidents and provided on-site / remote technical resolutions.</li>
+                            <li>Managed e-commerce sales support and troubleshooting for credit-card transactions.</li>
+                        </ul>
+                        <div class="tl-tech">
+                            <span>POS</span><span>Support</span><span>E-commerce</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+            <div class="reveal">
+                <div class="eyebrow">05 · Education</div>
+                <h2 class="section-title">Always<br>learning.</h2>
+            </div>
+
+            <div class="edu-grid reveal-stagger">
+                <article class="edu-card">
+                    <div class="edu-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <div class="edu-date">Sept 2024 — Jun 2026</div>
+                    <h3 class="edu-title">Multi-platform Application Development</h3>
+                    <div class="edu-school">I.E.S. Pío Baroja · Madrid</div>
+                    <p class="edu-desc">Database design (SQL, NoSQL), advanced programming (Java, Python), web development (HTML5, CSS3, JavaScript). Focus on software architecture, design patterns and AGILE methodologies.</p>
+                </article>
+
+                <article class="edu-card">
+                    <div class="edu-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <rect x="2" y="6" width="20" height="12" rx="2"/>
+                            <path d="M8 12h.01M12 12h.01M16 12h.01"/>
+                        </svg>
+                    </div>
+                    <div class="edu-date">Nov 2024 — Feb 2025 · 160h</div>
+                    <h3 class="edu-title">Video Game &amp; VR Development with Unity 3D</h3>
+                    <div class="edu-school">CFTIC</div>
+                    <p class="edu-desc">Intensive training in Unity 3D, C# programming, 3D modeling, physics systems and AR/VR development. Game design principles for immersive interactive experiences.</p>
+                </article>
+
+                <article class="edu-card">
+                    <div class="edu-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+                        </svg>
+                    </div>
+                    <div class="edu-date">2023</div>
+                    <h3 class="edu-title">Programming Bootcamp</h3>
+                    <div class="edu-school">Academia 42 · Berlin</div>
+                    <p class="edu-desc">Intensive peer-to-peer programming bootcamp covering systems programming and software fundamentals in a project-based learning environment.</p>
+                </article>
+            </div>
+
+            <!-- Languages -->
+            <div class="reveal" style="margin-top: 80px;">
+                <div class="eyebrow">Spoken languages</div>
+            </div>
+            <div class="lang-grid reveal-stagger">
+                <div class="lang-card">
+                    <div class="lang-flag">🇪🇸</div>
+                    <div class="lang-name">Spanish</div>
+                    <div class="lang-level">// mother tongue</div>
+                    <div class="lang-bar"><div class="lang-bar-fill" data-level="100"></div></div>
+                </div>
+                <div class="lang-card">
+                    <div class="lang-flag">🇬🇧</div>
+                    <div class="lang-name">English</div>
+                    <div class="lang-level">// B2 · upper intermediate</div>
+                    <div class="lang-bar"><div class="lang-bar-fill" data-level="70"></div></div>
+                </div>
+                <div class="lang-card">
+                    <div class="lang-flag">🇩🇪</div>
+                    <div class="lang-name">German</div>
+                    <div class="lang-level">// B2 · upper intermediate</div>
+                    <div class="lang-bar"><div class="lang-bar-fill" data-level="70"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <div class="reveal">
+                <div class="eyebrow" style="justify-content:center; display:flex;">06 · Let's talk</div>
+                <h2>Have a project<br>in mind? <span class="text-gradient">Say hi.</span></h2>
+                <p>Open to mobile development opportunities. I'd love to hear what you're building.</p>
+
+                <div class="hero-actions" style="justify-content:center;">
+                    <a href="mailto:aldro25@gmail.com" class="btn btn-primary">
+                        aldro25@gmail.com
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M13 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="contact-info">
+                    <a href="tel:+34614318532" class="contact-pill">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/>
+                        </svg>
+                        614 318 532
+                    </a>
+                    <a href="mailto:aldro25@gmail.com" class="contact-pill">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <path d="M22 6l-10 7L2 6"/>
+                        </svg>
+                        aldro25@gmail.com
+                    </a>
+                    <span class="contact-pill" style="cursor:default;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Madrid, Spain
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <span>© 2026 · Alberto Domínguez Domingo</span>
+            <span>Designed &amp; built with ♥ in Madrid</span>
+        </footer>
+
+    </main>
+
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
