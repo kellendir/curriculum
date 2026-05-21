@@ -82,12 +82,32 @@ const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
         if (e.isIntersecting) {
             e.target.classList.add('is-visible');
+            
+            // GSAP Chip Stagger Animation
+            if (e.target.classList.contains('skills-grid')) {
+                e.target.querySelectorAll('.skill-card').forEach((card, i) => {
+                    gsap.to(card.querySelectorAll('.chip'), {
+                        opacity: 1,
+                        y: 0,
+                        stagger: 0.1,
+                        duration: 0.5,
+                        delay: 0.1 + (i * 0.15),
+                        ease: "back.out(1.5)"
+                    });
+                });
+            }
+            
             io.unobserve(e.target);
         }
     });
 }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
 document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+// Initialize chips hidden so GSAP can animate them in
+document.querySelectorAll('.skill-card .chip').forEach(chip => {
+    gsap.set(chip, { opacity: 0, y: 15 });
+});
 
 /* ---------------------------------------------------------
    5. ACTIVE NAV LINK (scroll-spy)
@@ -163,3 +183,154 @@ document.querySelectorAll('.skill-card').forEach(card => {
    --------------------------------------------------------- */
 onScroll();
 updateParallax();
+
+/* =========================================================
+   WOW EFFECTS
+   ========================================================= */
+
+// 2. CUSTOM CURSOR & MAGNETIC BUTTONS
+const cursor = document.querySelector('.cursor');
+const hoverElements = document.querySelectorAll('a, button, .btn');
+let cursorX = window.innerWidth / 2, cursorY = window.innerHeight / 2;
+let targetX = cursorX, targetY = cursorY;
+
+window.addEventListener('mousemove', (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+});
+
+const updateCursor = () => {
+    cursorX += (targetX - cursorX) * 0.15;
+    cursorY += (targetY - cursorY) * 0.15;
+    if(cursor) cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+    requestAnimationFrame(updateCursor);
+};
+requestAnimationFrame(updateCursor);
+
+hoverElements.forEach(el => {
+    el.addEventListener('mouseenter', () => cursor?.classList.add('hovering'));
+    el.addEventListener('mouseleave', () => cursor?.classList.remove('hovering'));
+});
+
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.4, ease: "power2.out" });
+    });
+    btn.addEventListener('mouseleave', () => {
+        gsap.to(btn, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1, 0.3)" });
+    });
+});
+
+
+
+// 5. CANVAS SMOKE / FLUID TRAIL
+const canvas = document.getElementById('canvas-bg');
+if(canvas) {
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+    const particles = [];
+
+    window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    });
+
+    class Particle {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.size = Math.random() * 50 + 30; 
+            this.speedX = Math.random() * 1.5 - 0.75;
+            this.speedY = Math.random() * 1.5 - 0.75;
+            this.life = 1;
+            this.decay = Math.random() * 0.015 + 0.01;
+            this.color = Math.random() > 0.5 ? '127, 82, 255' : '199, 17, 225';
+        }
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.life -= this.decay;
+            this.size += 0.8; 
+        }
+        draw() {
+            ctx.globalCompositeOperation = 'screen';
+            const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
+            grad.addColorStop(0, `rgba(${this.color}, ${this.life * 0.15})`);
+            grad.addColorStop(1, `rgba(${this.color}, 0)`);
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    window.addEventListener('mousemove', (e) => {
+        if(Math.random() > 0.3) { 
+            particles.push(new Particle(e.clientX, e.clientY));
+        }
+    });
+
+    const animateCanvas = () => {
+        ctx.clearRect(0, 0, width, height);
+        for(let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+            if(particles[i].life <= 0) {
+                particles.splice(i, 1);
+                i--;
+            }
+        }
+        requestAnimationFrame(animateCanvas);
+    };
+    animateCanvas();
+}
+
+// 6. BACKGROUND ICONS PARALLAX
+gsap.utils.toArray('.skill-card').forEach(card => {
+    const bgIcons = card.querySelectorAll('.bg-icon-wrap');
+    if (bgIcons.length > 0) {
+        gsap.to(bgIcons, {
+            scrollTrigger: {
+                trigger: card,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            },
+            y: -40,
+            rotation: 15,
+            stagger: 0.1,
+            ease: "none"
+        });
+    }
+});
+
+// 7. MOBILE ICONS SCROLL SEQUENCE
+const mobileCard = document.querySelector('.mobile-card');
+if (mobileCard) {
+    const mobileIcons = mobileCard.querySelectorAll('.mobile-icon');
+    if(mobileIcons.length > 0) {
+        gsap.set(mobileIcons, { opacity: 0, y: 30, scale: 0.8 });
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: mobileCard,
+                start: "top 85%",
+                end: "bottom 30%",
+                scrub: true
+            }
+        });
+        
+        mobileIcons.forEach((icon, i) => {
+            tl.to(icon, { opacity: 1, y: 0, scale: 1, duration: 1 }, i > 0 ? "-=0.3" : undefined);
+            
+            if (i < mobileIcons.length - 1) {
+                tl.to(icon, { opacity: 0, y: -40, scale: 0.8, duration: 1 }, "+=0.3");
+            } else {
+                tl.to({}, {duration: 1}); // extend timeline so last icon stays visible
+            }
+        });
+    }
+}
