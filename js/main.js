@@ -271,13 +271,26 @@ if(canvas) {
         }
     }
 
+    let isCanvasVisible = true;
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        new IntersectionObserver((entries) => {
+            isCanvasVisible = entries[0].isIntersecting;
+        }, { rootMargin: '100px' }).observe(heroSection);
+    }
+
     window.addEventListener('mousemove', (e) => {
-        if(Math.random() > 0.3) { 
+        if(isCanvasVisible && Math.random() > 0.3) { 
             particles.push(new Particle(e.clientX, e.clientY));
         }
     });
 
     const animateCanvas = () => {
+        if (!isCanvasVisible && particles.length === 0) {
+            requestAnimationFrame(animateCanvas);
+            return;
+        }
+        
         ctx.clearRect(0, 0, width, height);
         for(let i = 0; i < particles.length; i++) {
             particles[i].update();
