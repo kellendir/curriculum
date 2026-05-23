@@ -191,38 +191,41 @@ updateParallax();
 // 2. CUSTOM CURSOR & MAGNETIC BUTTONS
 const cursor = document.querySelector('.cursor');
 const hoverElements = document.querySelectorAll('a, button, .btn');
-let cursorX = window.innerWidth / 2, cursorY = window.innerHeight / 2;
-let targetX = cursorX, targetY = cursorY;
 
-window.addEventListener('mousemove', (e) => {
-    targetX = e.clientX;
-    targetY = e.clientY;
-});
+if (cursor && window.matchMedia('(pointer: fine)').matches) {
+    let cursorX = window.innerWidth / 2, cursorY = window.innerHeight / 2;
+    let targetX = cursorX, targetY = cursorY;
 
-const updateCursor = () => {
-    cursorX += (targetX - cursorX) * 0.15;
-    cursorY += (targetY - cursorY) * 0.15;
-    if(cursor) cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+    window.addEventListener('mousemove', (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+    });
+
+    const updateCursor = () => {
+        cursorX += (targetX - cursorX) * 0.15;
+        cursorY += (targetY - cursorY) * 0.15;
+        cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+        requestAnimationFrame(updateCursor);
+    };
     requestAnimationFrame(updateCursor);
-};
-requestAnimationFrame(updateCursor);
 
-hoverElements.forEach(el => {
-    el.addEventListener('mouseenter', () => cursor?.classList.add('hovering'));
-    el.addEventListener('mouseleave', () => cursor?.classList.remove('hovering'));
-});
+    hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+    });
 
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('mousemove', (e) => {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.4, ease: "power2.out" });
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.4, ease: "power2.out" });
+        });
+        btn.addEventListener('mouseleave', () => {
+            gsap.to(btn, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1, 0.3)" });
+        });
     });
-    btn.addEventListener('mouseleave', () => {
-        gsap.to(btn, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1, 0.3)" });
-    });
-});
+}
 
 
 

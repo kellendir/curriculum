@@ -1350,28 +1350,33 @@ footer {
    NEW WOW EFFECTS (Custom Cursor, Canvas, Floating Images)
    ========================================================= */
 
+.cursor {
+    display: none;
+}
+
 @media (pointer: fine) {
     body { cursor: none; }
     a, button, .btn { cursor: none; }
-}
 
-.cursor {
-    position: fixed;
-    top: 0; left: 0;
-    width: 20px; height: 20px;
-    border: 2px solid var(--text-0);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.3s var(--ease-out), height 0.3s var(--ease-out), background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
-    mix-blend-mode: difference;
-}
+    .cursor {
+        display: block;
+        position: fixed;
+        top: 0; left: 0;
+        width: 20px; height: 20px;
+        border: 2px solid var(--text-0);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s var(--ease-out), height 0.3s var(--ease-out), background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+        mix-blend-mode: difference;
+    }
 
-.cursor.hovering {
-    width: 60px; height: 60px;
-    background-color: var(--text-0);
-    border-color: transparent;
+    .cursor.hovering {
+        width: 60px; height: 60px;
+        background-color: var(--text-0);
+        border-color: transparent;
+    }
 }
 
 #canvas-bg {
