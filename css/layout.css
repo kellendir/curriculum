@@ -60,7 +60,7 @@ nav {
     justify-content: space-between;
     padding: 0 clamp(20px, 4vw, 56px);
     z-index: 100;
-    background: rgba(10, 10, 15, 0.6);
+    background: var(--nav-bg, rgba(10, 10, 15, 0.6));
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid transparent;
