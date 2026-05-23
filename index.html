@@ -513,7 +513,10 @@
                 <p>Open to mobile development opportunities. I'd love to hear what you're building.</p>
 
                 <div class="contact-form-wrap">
-                    <form class="contact-form" action="https://formspree.io/f/maqkjgzv" method="POST">
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/maqkjgzv" method="POST">
+                        <!-- Honeypot para bots -->
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                        
                         <div class="form-row">
                             <div class="form-group">
                                 <input type="text" name="name" required placeholder="Name" class="form-input">
@@ -525,12 +528,13 @@
                         <div class="form-group">
                             <textarea name="message" required placeholder="Tell me about your project..." rows="4" class="form-input"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary contact-btn">
+                        <button type="submit" class="btn btn-primary contact-btn" id="contact-submit-btn">
                             Send Message
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
                             </svg>
                         </button>
+                        <p id="contact-status" class="form-status"></p>
                     </form>
                     <p class="form-note">Alternatively, email me at <a href="mailto:kirtashdev@gmail.com" class="text-gradient">kirtashdev@gmail.com</a></p>
                 </div>

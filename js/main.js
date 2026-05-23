@@ -350,3 +350,47 @@ if (mobileCard) {
         });
     }
 }
+
+// 8. AJAX CONTACT FORM SUBMISSION
+const contactForm = document.getElementById('contact-form');
+const contactStatus = document.getElementById('contact-status');
+const contactBtn = document.getElementById('contact-submit-btn');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        contactBtn.disabled = true;
+        contactBtn.innerHTML = 'Sending...';
+        contactStatus.textContent = '';
+        contactStatus.className = 'form-status';
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                contactStatus.textContent = 'Thanks for reaching out! I will get back to you soon.';
+                contactStatus.classList.add('success');
+                contactForm.reset();
+            } else {
+                const data = await response.json();
+                if (data.hasOwnProperty('errors')) {
+                    contactStatus.textContent = data.errors.map(error => error.message).join(', ');
+                } else {
+                    contactStatus.textContent = 'Oops! There was a problem submitting your form.';
+                }
+                contactStatus.classList.add('error');
+            }
+        } catch (error) {
+            contactStatus.textContent = 'Oops! There was a problem submitting your form.';
+            contactStatus.classList.add('error');
+        } finally {
+            contactBtn.disabled = false;
+            contactBtn.innerHTML = `Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>`;
+        }
+    });
+}

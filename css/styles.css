@@ -1340,6 +1340,21 @@ textarea.form-input {
     margin: 0;
 }
 
+.form-status {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.form-status.success {
+    color: var(--success, #06e775);
+}
+
+.form-status.error {
+    color: var(--error, #ff3a44);
+}
+
 /* =========================================================
    FOOTER
    ========================================================= */
