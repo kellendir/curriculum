@@ -22,7 +22,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 
 <body>
@@ -40,7 +43,7 @@
     <div class="scroll-progress" id="scrollProgress"></div>
 
     <!-- Nav -->
-    <nav id="nav">
+    <nav id="nav" aria-label="Main Navigation">
         <a href="#top" class="logo">
             <span class="logo-dot"></span>
             Kirtash Dev
@@ -54,13 +57,13 @@
         </ul>
         <a href="#contact" class="nav-cta">
             Get in touch
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <path d="M5 12h14M13 5l7 7-7 7"/>
             </svg>
         </a>
     </nav>
 
-    <main id="top">
+    <main role="main" id="top">
 
         <!-- HERO -->
         <section class="hero">
@@ -82,7 +85,7 @@
                 <div class="hero-actions">
                     <a href="#contact" class="btn btn-primary">
                         Let's build something
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <path d="M5 12h14M13 5l7 7-7 7"/>
                         </svg>
                     </a>
@@ -210,7 +213,7 @@
                             <path fill="url(#psG2)" d="M364.7 169.7 61.7 8.2c-17.3-9.8-32.7-8.6-42 1.3l259.8 247.4 85.2-87.2z"/>
                         </svg>
                         View on Google Play
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                             <path d="M7 17L17 7M17 7H8M17 7v9"/>
                         </svg>
                     </a>
@@ -229,7 +232,7 @@
                     </div>
                     <a href="https://www.larazon.es/galicia/galicia-lanza-app-avisar-incendios-tres-clics-refuerza-mayor-operativo-fuego_2026032369c16ae3c3ab173a4614fe48.html" target="_blank" rel="noopener" class="project-link">
                         Read the press coverage
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                             <path d="M7 17L17 7M17 7H8M17 7v9"/>
                         </svg>
                     </a>
@@ -248,7 +251,7 @@
                     </div>
                     <a href="https://thethingfromthefuture.cc/#!/home" target="_blank" rel="noopener" class="project-link">
                         Visit the site
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                             <path d="M7 17L17 7M17 7H8M17 7v9"/>
                         </svg>
                     </a>
@@ -441,7 +444,7 @@
             <div class="edu-grid reveal-stagger">
                 <article class="edu-card">
                     <div class="edu-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                             <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
                             <path d="M6 12v5c3 3 9 3 12 0v-5"/>
                         </svg>
@@ -455,7 +458,7 @@
 
                 <article class="edu-card">
                     <div class="edu-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
                             <path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12"/>
                         </svg>
@@ -468,7 +471,7 @@
 
                 <article class="edu-card">
                     <div class="edu-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                             <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
                         </svg>
                     </div>
@@ -530,7 +533,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary contact-btn" id="contact-submit-btn">
                             Send Message
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
                             </svg>
                         </button>
@@ -548,8 +551,15 @@
 
     </main>
 
-    <div class="cursor"></div>
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
 
+    <div class="cursor" aria-hidden="true"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
     <script src="js/main.js" defer></script>

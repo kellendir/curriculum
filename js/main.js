@@ -394,3 +394,33 @@ if (contactForm) {
         }
     });
 }
+
+// 9. 3D TILT EFFECT (Premium UX)
+if (typeof VanillaTilt !== 'undefined') {
+    VanillaTilt.init(document.querySelectorAll(".project-card, .skill-card, .edu-card"), {
+        max: 5,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.08,
+        scale: 1.02
+    });
+}
+
+// 10. SCROLL TO TOP BUTTON
+const scrollBtn = document.getElementById('scrollToTop');
+if (scrollBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            scrollBtn.classList.add('visible');
+        } else {
+            scrollBtn.classList.remove('visible');
+        }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
