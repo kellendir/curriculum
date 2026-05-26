@@ -375,7 +375,7 @@ footer {
     .hero { padding-top: calc(var(--nav-h) + 16px); }
     .hero-banner { margin-bottom: 32px; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
-    .about-photo-wrap { position: relative; top: 0; max-width: 400px; }
+    .about-photo-wrap { position: relative; top: 0; max-width: 400px; margin: 0 auto; }
 }
 
 @media (max-width: 720px) {
