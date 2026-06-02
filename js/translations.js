@@ -81,7 +81,8 @@ const translations = {
         "contact.eyebrow": "06 · Let's talk",
         "contact.title": "Have a project<br>in mind? <span class=\"text-gradient\">Say hi.</span>",
         "contact.desc": "Open to mobile development opportunities. I'd love to hear what you're building.",
-        "contact.btn": "Send Message"
+        "contact.btn": "Send Message",
+        "contact.coffee": "If you like my work, you can <a href=\"https://buymeacoffee.com/kirtashdev\" target=\"_blank\" rel=\"noopener\" class=\"text-gradient\">buy me a coffee ☕</a>"
     },
     es: {
         "nav.about": "Sobre mí",
@@ -165,7 +166,8 @@ const translations = {
         "contact.eyebrow": "06 · Hablemos",
         "contact.title": "¿Tienes un proyecto<br>en mente? <span class=\"text-gradient\">Saluda.</span>",
         "contact.desc": "Abierto a oportunidades en desarrollo móvil. Me encantaría escuchar qué estás construyendo.",
-        "contact.btn": "Enviar Mensaje"
+        "contact.btn": "Enviar Mensaje",
+        "contact.coffee": "Si te gusta mi trabajo, puedes <a href=\"https://buymeacoffee.com/kirtashdev\" target=\"_blank\" rel=\"noopener\" class=\"text-gradient\">invitarme a un café ☕</a>"
     },
     de: {
         "nav.about": "Über mich",
@@ -249,6 +251,7 @@ const translations = {
         "contact.eyebrow": "06 · Lass uns reden",
         "contact.title": "Hast du ein Projekt<br>im Kopf? <span class=\"text-gradient\">Sag Hallo.</span>",
         "contact.desc": "Offen für Mobile-Development-Möglichkeiten. Ich würde gerne hören, was du entwickelst.",
-        "contact.btn": "Nachricht Senden"
+        "contact.btn": "Nachricht Senden",
+        "contact.coffee": "Wenn dir meine Arbeit gefällt, kannst du mir <a href=\"https://buymeacoffee.com/kirtashdev\" target=\"_blank\" rel=\"noopener\" class=\"text-gradient\">einen Kaffee spendieren ☕</a>"
     }
 };

@@ -368,6 +368,15 @@ footer {
     z-index: 2;
 }
 
+.footer-coffee {
+    color: var(--text-3);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-coffee:hover {
+    color: var(--text-0);
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */

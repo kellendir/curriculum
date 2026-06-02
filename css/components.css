@@ -897,6 +897,10 @@ textarea.form-input {
     margin: 0;
 }
 
+.form-note--coffee {
+    margin-top: 8px;
+}
+
 .form-status {
     text-align: center;
     font-size: 15px;
