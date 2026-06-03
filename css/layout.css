@@ -372,10 +372,27 @@ footer {
 .footer-coffee {
     color: var(--text-3);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.3s var(--ease-out);
 }
 .footer-coffee:hover {
-    color: var(--text-0);
+    color: var(--accent-2);
+}
+
+.coffee-hover {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+.coffee-hover:hover {
+    gap: 10px;
+}
+.coffee-emoji {
+    transition: transform 0.3s var(--ease-out);
+    display: inline-block;
+}
+.coffee-hover:hover .coffee-emoji {
+    transform: translateX(4px);
 }
 
 /* =========================================================
