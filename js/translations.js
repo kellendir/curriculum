@@ -82,7 +82,7 @@ const translations = {
         "contact.title": "Have a project<br>in mind? <span class=\"text-gradient\">Say hi.</span>",
         "contact.desc": "Open to mobile development opportunities. I'd love to hear what you're building.",
         "contact.btn": "Send Message",
-        "contact.coffee": "If you like my work, you can <a href=\"https://buymeacoffee.com/kirtashdev\" target=\"_blank\" rel=\"noopener\" class=\"text-gradient\">buy me a coffee ☕</a>"
+        "contact.coffee": "If you like my work, you can <a href=\"https://buymeacoffee.com/kirtashdev\" target=\"_blank\" rel=\"noopener\" class=\"text-gradient coffee-hover\">buy me a coffee <span class=\"coffee-emoji\">☕</span></a>"
     },
     es: {
         "nav.about": "Sobre mí",
@@ -167,7 +167,7 @@ const translations = {
         "contact.title": "¿Tienes un proyecto<br>en mente? <span class=\"text-gradient\">Saluda.</span>",
         "contact.desc": "Abierto a oportunidades en desarrollo móvil. Me encantaría escuchar qué estás construyendo.",
         "contact.btn": "Enviar Mensaje",
-        "contact.coffee": "Si te gusta mi trabajo, puedes <a href=\"https://buymeacoffee.com/kirtashdev\" target=\"_blank\" rel=\"noopener\" class=\"text-gradient\">invitarme a un café ☕</a>"
+        "contact.coffee": "Si te gusta mi trabajo, puedes <a href=\"https://buymeacoffee.com/kirtashdev\" target=\"_blank\" rel=\"noopener\" class=\"text-gradient coffee-hover\">invitarme a un café <span class=\"coffee-emoji\">☕</span></a>"
     },
     de: {
         "nav.about": "Über mich",
@@ -252,6 +252,6 @@ const translations = {
         "contact.title": "Hast du ein Projekt<br>im Kopf? <span class=\"text-gradient\">Sag Hallo.</span>",
         "contact.desc": "Offen für Mobile-Development-Möglichkeiten. Ich würde gerne hören, was du entwickelst.",
         "contact.btn": "Nachricht Senden",
-        "contact.coffee": "Wenn dir meine Arbeit gefällt, kannst du mir <a href=\"https://buymeacoffee.com/kirtashdev\" target=\"_blank\" rel=\"noopener\" class=\"text-gradient\">einen Kaffee spendieren ☕</a>"
+        "contact.coffee": "Wenn dir meine Arbeit gefällt, kannst du mir <a href=\"https://buymeacoffee.com/kirtashdev\" target=\"_blank\" rel=\"noopener\" class=\"text-gradient coffee-hover\">einen Kaffee spendieren <span class=\"coffee-emoji\">☕</span></a>"
     }
 };
