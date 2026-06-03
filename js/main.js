@@ -202,8 +202,8 @@ if (cursor && window.matchMedia('(pointer: fine)').matches) {
     });
 
     const updateCursor = () => {
-        cursorX += (targetX - cursorX) * 0.15;
-        cursorY += (targetY - cursorY) * 0.15;
+        cursorX = targetX;
+        cursorY = targetY;
         cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
         requestAnimationFrame(updateCursor);
     };
