@@ -209,9 +209,20 @@ if (cursor && window.matchMedia('(pointer: fine)').matches) {
     };
     requestAnimationFrame(updateCursor);
 
-    hoverElements.forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.closest('a, button, .btn')) {
+            cursor.classList.add('hovering');
+        }
+    });
+    
+    document.addEventListener('mouseout', (e) => {
+        // e.relatedTarget is the element the mouse is entering.
+        // We only remove hovering if we are completely leaving the 'a, button, .btn' element
+        const related = e.relatedTarget;
+        const currentClosest = e.target.closest('a, button, .btn');
+        if (currentClosest && (!related || !currentClosest.contains(related))) {
+            cursor.classList.remove('hovering');
+        }
     });
 
     document.querySelectorAll('.btn').forEach(btn => {
