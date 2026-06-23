@@ -319,6 +319,14 @@
     border-radius: 6px;
 }
 
+.project-links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    align-items: flex-start;
+}
+
 .project-link {
     display: inline-flex;
     align-items: center;
@@ -329,6 +337,14 @@
     font-weight: 500;
     margin-top: auto;
     transition: color 0.3s, gap 0.3s;
+}
+
+.project-links .project-link { margin-top: 0; }
+
+.project-link.secondary {
+    color: var(--text-2);
+    font-size: 12.5px;
+    font-weight: 400;
 }
 
 .project-link:hover {
